@@ -10,4 +10,4 @@ if __name__ == "__main__":
         while i < argc:
             sum += int(argv[i])
             i += 1
-    print(sum)
+        print(sum)
