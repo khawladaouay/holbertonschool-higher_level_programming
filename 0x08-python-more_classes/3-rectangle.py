@@ -52,11 +52,11 @@ class Rectangle:
 
     def __str__(self):
         if self.__width == 0 or self.height == 0:
-            return ""
-        mat = ""
+            return ("")
+        str = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                mat += "#"
-            if j != self.__width:
-                mat += '\n'
-        return mat
+                str += "#"
+            if i < self.__height - 1:
+                str += "\n"
+        return (str)
