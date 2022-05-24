@@ -90,6 +90,4 @@ class Rectangle:
         """square classmethod
         return a new rectange with size as width and height
         """
-        if size < 0:
-            raise TypeError("square cant be")
         return cls(size, size)
