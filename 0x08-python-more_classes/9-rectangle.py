@@ -46,14 +46,6 @@ class Rectangle:
         else:
             return (self.__height + self.__width)*2
 
-    def print(self):
-        if self.__width == 0 or self.__height == 0:
-            return print("")
-        else:
-            for i in range(self.height):
-                for i in range(self.width):
-                    print("#", end="")
-
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ("")
