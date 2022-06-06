@@ -7,6 +7,9 @@ class Rectangle(Base):
     """class Rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """__init__ method
+        this method initializes on instance creation
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -62,9 +65,15 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
+        """area Method
+        this method will calculate the rectangle object's area
+        """
         return self.height * self.width
 
     def display(self):
+        """display Method
+        this method will display the rectangle
+        """
         for j in range(self.y):
             print("")
 
@@ -76,10 +85,16 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """__str__ method
+        this method will print the rectangle on print() or str()
+        """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -\
  {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
+        """update Method
+        this method will assign a key/value argument to attributes
+        """
         argc = len(args)
         kwargc = len(kwargs)
         my_list = ["id", "width", "height", "x", "y"]
@@ -92,3 +107,10 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if key in my_list:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """to_dictionary Method
+        this method will return the dictionary representation of a Rectangle
+        """
+        return {"id": self.id, "width": self.width, "height":
+                self.height, "x": self.x, "y": self.y}
