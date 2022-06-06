@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from models.base import Base
 """Rectangle"""
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -76,7 +76,8 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -\
+ {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
         argc = len(args)
@@ -91,4 +92,3 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if key in my_list:
                     setattr(self, key, value)
-       
