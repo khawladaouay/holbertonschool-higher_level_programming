@@ -1,7 +1,7 @@
 -- create a table second_table in the atabase
 CREATE TABLE IF NOT EXISTS second_table (
 	id INT,
-	name VARCHA(256),
+	name VARCHAR(256),
 	score INT
 );
 INSERT INTO `second_table` (`id`, `name`, `score`) VALUES (1, "John", 10);
