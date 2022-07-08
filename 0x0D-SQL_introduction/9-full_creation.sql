@@ -1,5 +1,5 @@
 -- create a table second_table in the atabase
-CREATE  IF NOT EXISTS second_table (
+CREATE TABLE IF NOT EXISTS second_table (
 	id INT,
 	name VARCHA(256),
 	score INT
