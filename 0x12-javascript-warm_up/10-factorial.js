@@ -7,9 +7,7 @@ function factorial (n) {
   }
 }
 const args = process.argv;
-if (parseInt(args[2]) >= 200) {
-  console.log('Infinity');
-} else if (!parseInt(args[2])) {
+if (!parseInt(args[2])) {
   console.log(1);
 } else {
   console.log(factorial(args[2]));
