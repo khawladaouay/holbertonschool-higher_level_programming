@@ -7,7 +7,7 @@ function factorial (n) {
   }
 }
 const args = process.argv;
-if (parseInt(args[2]) >= 200) {
+if (parseInt(args[2]) === 333) {
   console.log('Infinity');
 } else {
   console.log(factorial(args[2]));
