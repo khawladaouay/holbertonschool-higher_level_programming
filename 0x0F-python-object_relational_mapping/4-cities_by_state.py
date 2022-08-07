@@ -16,11 +16,11 @@ if __name__ == "__main__":
     c = db_connection.cursor()
 
     """execute query"""
-    c.execute("SELECT cities.id, cities.name, states.name FROM cities JOIN states ON cities.state_id = states.id")
+    c.execute("SELECT cities.id, cities.name, states.name FROM \
+        cities JOIN states ON cities.state_id = states.id")
     n = c.fetchall()
     for i in n:
         print(i)
-    
 
     """close all cursor and database"""
     c.close()
