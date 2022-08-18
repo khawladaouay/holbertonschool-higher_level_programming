@@ -1,3 +1,3 @@
 #!/bin/bash
 #sends a GET request to the URL
-curl -sL GET "$1"
+curl -sX GET "$1" -L 200
