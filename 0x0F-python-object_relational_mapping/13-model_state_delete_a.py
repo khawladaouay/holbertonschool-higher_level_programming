@@ -14,7 +14,7 @@ if __name__ == '__main__':
                                    argv[3]), pool_pre_ping=True)
 
     session = Session(engine)
-    add = session.query(State).filter(State.name.like('%a%')).\
-        delete(synchronize_session="fetch")
-    session.commit()
+    for row in session.query(State).order_by(State.id).filter(
+          State.name.contains('a')):
+        session.delete(row)
     session.close()
