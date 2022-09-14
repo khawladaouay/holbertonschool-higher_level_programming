@@ -2,12 +2,12 @@
 const request = require('request');
 request(process.argv[2], function (err, f, body) {
   const dic = {};
-  for (const res of JSON.parse(body)) {
-    if (res.completed) {
-      if (dic[res.userId]) {
-        data[res.userId] += 1;
+  for (const resp of JSON.parse(body)) {
+    if (resp.completed) {
+      if (dic[resp.userId]) {
+        data[resp.userId] += 1;
       } else {
-        dic[res.userId] = 1;
+        dic[resp.userId] = 1;
       }
     }
   }
