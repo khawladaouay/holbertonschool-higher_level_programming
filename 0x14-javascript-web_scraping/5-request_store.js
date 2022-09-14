@@ -6,7 +6,7 @@ axios.get(reqUrl)
   .then(function (response) {
     fs.writeFile(process.argv[3], response.data, (error, data) => {
       if (error) {
-        console.error(err);
+        console.log(error);
       }
     });
   });
