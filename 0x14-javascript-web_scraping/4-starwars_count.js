@@ -1,3 +1,4 @@
+#!/usr/bin/node
 const axios = require('axios').default;
 const reqUrl = process.argv[2];
 let count = 0;
@@ -12,7 +13,4 @@ axios.get(reqUrl)
       }
     }
     console.log(count);
-  })
-  .catch(function (error) {
-    console.error(error);
   });
